@@ -1,0 +1,118 @@
+/* ─── Stories Page ─── */
+
+.stories-page-inner {
+  width: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.stories-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 32px;
+  padding: 24px;
+  flex: 1;
+  overflow-y: auto;
+  align-content: start;
+}
+
+.story-card {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  opacity: 0;
+}
+
+.story-card--featured {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 0;
+}
+
+.story-card-img {
+  aspect-ratio: 16 / 10;
+  width: 100%;
+  transition: opacity 0.3s;
+}
+
+.story-card--featured .story-card-img {
+  aspect-ratio: 16 / 9;
+  height: 100%;
+}
+
+.story-card:hover .story-card-img {
+  opacity: 0.8;
+}
+
+.story-card-body {
+  padding: 16px 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.story-card--featured .story-card-body {
+  padding: 0 0 0 28px;
+  justify-content: center;
+}
+
+.story-card-cat {
+  font-size: 9px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+  line-height: 100%;
+}
+
+.story-card-title {
+  font-family: 'Grotesk', 'Neue', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--text-bright);
+  line-height: 135%;
+  margin: 10px 0 0;
+  display: flex;
+}
+
+.story-card--featured .story-card-title {
+  font-size: 24px;
+  line-height: 125%;
+}
+
+.story-card-excerpt {
+  font-size: 12px;
+  color: var(--text-dim);
+  line-height: 165%;
+  margin: 10px 0 0;
+}
+
+.story-card-date {
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  margin-top: 12px;
+  line-height: 100%;
+}
+
+@media (max-width: 900px) {
+  .stories-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding: 16px 20px;
+  }
+  .story-card--featured {
+    grid-column: auto;
+    display: flex;
+    flex-direction: column;
+  }
+  .story-card--featured .story-card-body {
+    padding: 16px 0 0;
+  }
+  .story-card--featured .story-card-title {
+    font-size: 18px;
+  }
+}

@@ -5,9 +5,17 @@ const routes = {
     namespace: "home",
     loader: () => import("./pages/home/home.js"),
   },
-  "/alternative-page": {
-    namespace: "about",
+  "/schedule": {
+    namespace: "schedule",
     loader: () => import("./pages/about/about.js"),
+  },
+  "/shows": {
+    namespace: "shows",
+    loader: () => import("./pages/shows/shows.js"),
+  },
+  "/stories": {
+    namespace: "stories",
+    loader: () => import("./pages/stories/stories.js"),
   },
 };
 

@@ -1,19 +1,29 @@
 h1 {
   overflow: hidden;
-
   padding-left: 1vw;
   padding-right: 1vw;
-
+  padding-top: 2vw;
   line-height: 82%;
+  font-family: 'Grotesk', 'Neue', sans-serif;
+  color: var(--text-bright);
 }
 
 .home_title {
-  font-size: 26vw;
+  font-size: 22vw;
 }
 
-.about_title {
-  font-size: 26vw;
+.schedule_title {
+  font-size: 22vw;
 }
+
+.shows_title {
+  font-size: 22vw;
+}
+
+.stories_title {
+  font-size: 22vw;
+}
+
 .overflow {
   overflow: hidden;
 }
@@ -21,7 +31,23 @@ h1 {
 .title {
   transform: translateY(100%) rotateX(80deg);
 }
+
 [data-transition='container'] {
   transform: translateZ(0);
   backface-visibility: hidden;
+}
+
+@media (max-width: 900px) {
+  .home_title {
+    font-size: 18vw;
+  }
+  .schedule_title {
+    font-size: 16vw;
+  }
+  .shows_title {
+    font-size: 18vw;
+  }
+  .stories_title {
+    font-size: 16vw;
+  }
 }

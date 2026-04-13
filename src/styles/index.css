@@ -2,4 +2,6 @@
 @import "./navigation/nav.css";
 @import "./navigation/links.css";
 @import "./pages/app.css";
+@import "./pages/shows.css";
+@import "./pages/stories.css";
 @import "./variables.css";
